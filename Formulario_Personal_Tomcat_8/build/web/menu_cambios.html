@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="script_dos.js"></script>
+</head>
+<body onload="puntero()">
+    <div class="container">
+        
+        <div class="form-content">
+            <form action="cambios_menu.jsp" method="post" name="cambios" id="form">
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="Boleta">Boleta</label>
+                        <input type="text" name="boleta" placeholder="Ingresa tu boleta" disabled>
+                        <br>
+                    </div>
+                    <div class="input-field">
+                        <br>
+                        <label for="Nombre">Nombre</label>
+                        <input type="text" name="nombre" placeholder="Ingresa tu nombre" id="nombre" onkeypress="validar_caracteres()">
+                        <br>
+                    </div>
+                    <div class="input-field">
+                        <br>
+                        <select id="menu" name="especialidad">
+                            <option value="nada" disabled selected>Especialidad</option>
+                            <option value="Mecatronica">Mecatronica</option>
+                            <option value="Sistemas Digitales"> Sistemas Digitales</option>
+                            <option value="Programacion">Programación</option>
+                        </select>
+                        <br>
+                    </div>
+                    <div class="input-field">
+                        <br>
+                        <input type="checkbox" id="idioma_uno" name="idioma_uno" value="Ingles">
+                        <label for="Ingles">Ingles</label>
+                        <input type="checkbox" id="idioma_dos" name="idioma_dos" value="Frances">
+                        <label for="Frances">Frances</label>
+                        <input type="checkbox" id="idioma_tres" name="idioma_tres" value="Aleman">
+                        <label for="Aleman">Aleman</label>
+                    </div>
+                    <div class="input-field">
+                        <br>
+                        <input type="radio" id="matutino" name="turno" value="matutino">
+                        <label for="matutino">Matutino</label>
+                        <input type="radio" id="vespertino" name="turno" value="vespertino">
+                        <label for="vespertino">Vespertino</label>
+                    </div>
+                    <div class="input-fiel">
+                        <br><br>
+                        <label for="beca">Beca</label>
+                        <input type="text" name="beca"  placeholder="Ingresa la cantidad" id="beca" onkeypress="validar_punto(event)">
+                    </div>
+                    <div class="input-fiel">
+                        <br><br>
+                        <input type="button" onclick="validar(event)" value="Validar" name="btnValidar">
+                    </div>
+                    
+                </div>
+            </form>
+            </div>
+            
+        </div>
+</body>
+</html>

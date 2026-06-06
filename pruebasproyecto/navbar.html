@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar</title>
+  <link rel="stylesheet" href="css.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="headerr">
+      <div class="brand">
+        <img class="logo-circle" src="Imagen2.png" alt="Logo" />
+        <span class="brand-name">Centro Ecol√≥gico Para Personas de la Tercera Edad Sede Arag√≥n</span>
+      </div>
+    </header>
+  
+  <nav>
+  <a href="#usuarios" class="nav-item active">
+    <img src="usuarios.png" alt="Gesti√≥n de Usuarios" class="nav-img" />
+    <span><button onclick="document.getElementById('alta').showModal()">Gesti√≥n de Usuarios</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="informe.png" alt="Generar Informe" class="nav-img" />
+    <span><button onclick="document.getElementById('alta').showModal()">Generar Informe</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="donativos.png" alt="Registrar donativos" class="nav-img" />
+    <span><button onclick="document.getElementById('alta').showModal()">Registrar Donativos</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="actividades.png" alt="Actividades" class="nav-img" />
+    <span><button onclick="document.getElementById('alta_actividad').showModal()">Actividades</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="voluntarios.png" alt="Voluntarios" class="nav-img" />
+    <span><button onclick="document.getElementById('perfiles_pendientes').showModal()">Voluntarios</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="necesidades.png" alt="Necesidades del centro" class="nav-img" />
+    <span><button onclick="document.getElementById('alta_necesidad_centro').showModal()">Necesidades del centro</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="usuarios.png" alt="Gesti√≥n de Voluntarios" class="nav-img" />
+    <span><button onclick="document.getElementById('alta').showModal()">Gestionar Voluntarios</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="calendario.png" alt="Calendario de Actividades" class="nav-img" />
+    <span><button onclick="document.getElementById('consulta_calendario').showModal()">Calendario de Actividades</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="reservar.png" alt="Reservar" class="nav-img" />
+    <span><button onclick="document.getElementById('buscar_actividad').showModal()">Reservar</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="reservaciones.png" alt="Mis Reservaciones" class="nav-img" />
+    <span><button onclick="document.getElementById('Mis_reservaciones').showModal()">Mis Reservaciones</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="usuarios.png" alt="Registrarse como voluntario" class="nav-img" />
+    <span><button onclick="document.getElementById('registro').showModal()">Registrarse como voluntario</button></span>
+  </a>
+  <a href="#usuarios" class="nav-item active">
+    <img src="usuarios.png" alt="Tareas como voluntario" class="nav-img" />
+    <span><button onclick="document.getElementById('tareas').showModal()">Mis Tareas</button></span>
+  </a>
+</nav>
+ <dialog id="alta">
+            <div class="Titulo">
+                <p class="Menu"><h3>Gestionar Voluntarios</h3></p>
+            </div>
+        <button onclick="document.getElementById('alta').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen uno" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Registrar Voluntario</h3>
+        </div>
+        
+        <div class="botones">
+            <button onclick="cambiarVentana('alta', 'alta')">Alta</button>
+            <button onclick="cambiarVentana('alta', 'baja')">Baja</button>
+            <button onclick="cambiarVentana('alta', 'modificar')">Modificacion de fichas</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="nom1">Nombre</label>
+                    <input type="text" id="nom1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="correo1">Correo Electr√≥nico</label>
+                    <input type="text" id="correo1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="m_registro1">Motivo de registro</label>
+                    <input type="text" id="m_registro1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="f_nacimiento1">Fecha Nacimiento</label>
+                    <input type="text" placeholder="DD/MM/YYYY" id="f_nacimiento1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="curp1">CURP</label>
+                    <input type="text" id="curp1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="direc1">Direcci√≥n</label>
+                    <input type="text" id="direc1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="n_telefonico1">N√∫mero de Tel√©fono</label>
+                    <input type="text" id="n_telefonico1">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Actualizar</button>
+        </div>
+        </dialog>
+        
+        
+        
+        
+        <dialog id="baja">
+        <div class="Titulo">
+            <p class="Menu"><h3>Gestionar Voluntarios</h3></p>
+            </div>
+        <button onclick="document.getElementById('baja').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen uno" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Emilinar Registro de Voluntario</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('baja', 'alta')">Alta</button>
+            <button onclick="cambiarVentana('baja', 'baja')">Baja</button>
+            <button onclick="cambiarVentana('baja', 'modificar')">Modificaci√≥n de fichas</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="id_b_voluntario"></label>
+                    <input type="text" id="id_b_voluntario" placeholder="ID">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Dar de Baja</button>
+        </div>
+        </dialog>
+        
+        
+        
+        
+
+        <dialog id="modificar">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Gestionar Voluntarios</h3>
+        </p>
+            </div>
+        <button onclick="document.getElementById('modificar').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen uno" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Actualizar Datos de Voluntario</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('modificar', 'alta')">Alta</button>
+            <button onclick="cambiarVentana('modificar', 'baja')">Baja</button>
+            <button onclick="cambiarVentana('modificar', 'modificar')">Modificaci√≥n de fichas</button>
+        </div>
+        <div class="full_form">
+            <form>
+                <input type="text" placeholder="ID"><br><br>
+                <table>
+                    <tr>
+                        <th>ID Voluntario</th>
+                        <th>Nombre</th>
+                    </tr>
+                    <tr>
+                        <th>109170</th>
+                        <th>Juan</th>
+                    </tr>
+                    <tr>
+                        <th>109171</th>
+                        <th>Emiliano</th>
+                    </tr>
+                    <tr>
+                        <th>109173</th>
+                        <th>Ximena</th>
+                    </tr>
+                </table><br><br><br>
+                
+            </form>
+        </div>
+        <div>
+                <button onclick="cambiarVentana('modificar', 'actualizar')" class="btn-actualizar">Buscar</button>
+        </div>
+        </dialog>
+        
+        
+        
+        
+        
+
+        <dialog id="actualizar">
+        <div class="Titulo">
+        <p class="Menu">
+            <h3>Gestionar Voluntarios</h3>
+        </p>
+        </div>
+        <button onclick="cambiarVentana('actualizar', 'modificar')" class="boton_regresar">< Regresar</button>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen uno" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Modificar datos</h3>
+        </div>
+        <div class="botones">
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="nom">Nombre</label>
+                    <input type="text" id="nom">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="correo">Correo Electr√≥nico</label>
+                    <input type="text" id="correo">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="m_registro">Motivo de registro</label>
+                    <input type="text" id="m_registro">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="f_nacimiento">Fecha Nacimiento</label>
+                    <input type="text" placeholder="DD/MM/YYYY" id="f_nacimiento">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="curp">CURP</label>
+                    <input type="text" id="curp">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="direc">Direcci√≥n</label>
+                    <input type="text" id="direc">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="n_telefonico">N√∫mero de Tel√©fono</label>
+                    <input type="text" id="n_telefonico">
+                </div>
+            </form>
+        </div>
+         <div>
+                <button class="btn-actualizar">Actualizar</button>
+        </div>
+        </dialog>
+        
+        <!-- ======================= Gestionar Voluntarios ========================0 -->
+        <!-- ======================================================================0 -->
+        <!-- ======================================================================0 -->
+        <!-- ======================================================================0 -->
+        <!-- ======================= Necesidades del centro =======================0 -->
+        <dialog id="alta_necesidad_centro">
+            <div class="Titulo">
+                <p class="Menu"><h3>Necesidades del centro</h3></p>
+            </div>
+        <button onclick="document.getElementById('alta_necesidad_centro').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_dos.png" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Nueva Necesidad</h3>
+        </div>
+        
+        <div class="botones">
+            <button onclick="cambiarVentana('alta_necesidad_centro', 'alta_necesidad_centro')">Alta</button>
+            <button onclick="cambiarVentana('alta_necesidad_centro', 'baja_necesidad_centro')">Baja</button>
+            <button onclick="cambiarVentana('alta_necesidad_centro', 'modificar_necesidad_centro')">Modificacion de fichas</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="area_a">√Årea o Departameto</label>
+                    <input type="text" id="area_a">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="descripcion_a">Descripci√≥n</label>
+                    <input type="text" id="descripcion_a">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="prioridad_a">Prioridad</label>
+                    <select id="prioridad_a">
+                        <option value="Selecciona una opci√≥n" disabled selected>Prioridad</option>
+                        <option value="Alto">Alta Prioridad</option>
+                        <option value="Medio">Media Prioridad</option>
+                        <option value="Bajo">Baja Prioridad</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="numero_v_a">N√∫mero de Voluntarios</label>
+                    <input type="text" id="numero_v_a">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="fecha_i_a">Fecha de publicaci√≥n</label>
+                    <input type="text" id="fecha_i_a" placeholder="DD/MM/YYYY">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="fecha_f_a">Fecha de vencimiento</label>
+                    <input type="text" id="fecha_f_a" placeholder="DD/MM/YYYY">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Agregar</button>
+        </div>
+        </dialog>
+        
+        
+        
+        
+        <dialog id="baja_necesidad_centro">
+        <div class="Titulo">
+                <p class="Menu"><h3>Necesidades del centro</h3></p>
+            </div>
+        <button onclick="document.getElementById('baja_necesidad_centro').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_dos.png" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Eliminar Necesidad</h3>
+        </div>
+        
+        <div class="botones">
+            <button onclick="cambiarVentana('baja_necesidad_centro', 'alta_necesidad_centro')">Alta</button>
+            <button onclick="cambiarVentana('baja_necesidad_centro', 'baja_necesidad_centro')">Baja</button>
+            <button onclick="cambiarVentana('baja_necesidad_centro', 'modificar_necesidad_centro')">Modificacion de fichas</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="id_b"></label>
+                    <input type="text" id="id_b" placeholder="ID">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="descripcion_b">Descripci√≥n</label>
+                    <input type="text" id="descripcion_b">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Eliminar</button>
+        </div>
+        </dialog>
+        
+        
+        <dialog id="modificar_necesidad_centro">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Necesidades del centro</h3>
+        </p>
+            </div>
+        <button onclick="document.getElementById('modificar_necesidad_centro').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_dos.png" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Actualizar Datos de necesidades</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('modificar_necesidad_centro', 'alta_necesidad_centro')">Alta</button>
+            <button onclick="cambiarVentana('modificar_necesidad_centro', 'baja_necesidad_centro')">Baja</button>
+            <button onclick="cambiarVentana('modificar_necesidad_centro', 'modificar_necesidad_centro')">Modificaci√≥n de fichas</button>
+        </div>
+        <div class="full_form">
+            <form>
+                <div class="browser">
+                    <input type="text" placeholder="ID"><br><br>
+                </div>
+                <table>
+                    <tr>
+                        <th>ID Necesidad</th>
+                        <th>Descripci√≥n</th>
+                    </tr>
+                    <tr>
+                        <th>109170</th>
+                        <th>Activiades de nataci√≥n</th>
+                    </tr>
+                    <tr>
+                        <th>109171</th>
+                        <th>Material para clases de danza</th>
+                    </tr>
+                    <tr>
+                        <th>109173</th>
+                        <th>Falta de ayudantes</th>
+                    </tr>
+                </table><br><br><br>
+                
+            </form>
+        </div>
+        <div>
+                <button onclick="cambiarVentana('modificar_necesidad_centro', 'actualizar_necesidad_centro')" class="btn-actualizar">Buscar</button>
+        </div>
+        </dialog>
+        
+        
+
+        <dialog id="actualizar_necesidad_centro">
+        <div class="Titulo">
+        <p class="Menu">
+            <h3>Necesidades del centro</h3>
+        </p>
+        </div>
+        <button onclick="cambiarVentana('actualizar_necesidad_centro', 'modificar_necesidad_centro')" class="boton_regresar">< Regresar</button>
+        <div class="imagen_con">
+            <img src="imagen_dos.png" alt="imagen dos" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Modificar datos</h3>
+        </div>
+         <!-- <div class="botones">
+        </div> -->
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="area_ac">√Årea o Departameto</label>
+                    <input type="text" id="area_ac">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="descripcion_ac">Descripci√≥n</label>
+                    <input type="text" id="descripcion_ac">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="prioridad_ac">Prioridad</label>
+                    <select id="prioridad_ac">
+                        <option value="Selecciona una opci√≥n" disabled selected>Prioridad</option>
+                        <option value="Alto">Alta Prioridad</option>
+                        <option value="Medio">Media Prioridad</option>
+                        <option value="Bajo">Baja Prioridad</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="numero_v_ac">N√∫mero de Voluntarios</label>
+                    <input type="text" id="numero_v_ac">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="fecha_i_ac">Fecha de publicaci√≥n</label>
+                    <input type="text" id="fecha_i_ac" placeholder="DD/MM/YYYY">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="fecha_f_ac">Fecha de vencimiento</label>
+                    <input type="text" id="fecha_f_ac" placeholder="DD/MM/YYYY">
+                </div>
+            </form>
+        </div>
+         <div>
+                <button class="btn-actualizar">Actualizar</button>
+        </div>
+        </dialog>
+        
+        <!-- ======================= Necesidades del centro =======================0 -->
+        <!-- ======================================================================0 -->
+        <!-- ======================================================================0 -->
+        <!-- ======================================================================0 -->
+        <!-- ======================= Voluntarios ==================================0 -->
+        
+        <dialog id="perfiles_pendientes">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Voluntarios</h3>
+        </p>
+            </div>
+        <button onclick="document.getElementById('perfiles_pendientes').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_tres.png" alt="imagen 3" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Perfiles Pendientes</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('perfiles_pendientes', 'perfiles_pendientes')">Perfiles Pendientes</button>
+            <button onclick="cambiarVentana('perfiles_pendientes', 'aprobar_voluntario')">Validar Voluntario</button>
+            <button onclick="cambiarVentana('perfiles_pendientes', 'ver_usuarios')">Consultar Voluntarios</button>
+        </div>
+        <div class="full_form">
+            <form>
+                <div class="browser">
+                    <input type="text" placeholder="ID"><br><br>
+                </div>
+                <table>
+                    <tr>
+                        <th>ID Voluntario</th>
+                        <th>Status</th>
+                    </tr>
+                </table><br><br><br>
+                
+            </form>
+        </div>
+        <div>
+                <button onclick="cambiarVentana('perfiles_pendientes', 'ver_voluntario')" class="btn-actualizar">Revisar</button>
+        </div>
+        </dialog>
+        
+        <dialog id="ver_voluntario">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Voluntarios</h3>
+        </p>
+            </div>
+        <button onclick="cambiarVentana('ver_voluntario', 'perfiles_pendientes')" class="boton_regresar">< Regresar</button>
+        <div class="imagen_con">
+            <img src="imagen_tres.png" alt="imagen 3" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Perfiles Pendientes</h3>
+        </div>
+       
+        <div class="full_form">
+            <form>
+                <table>
+                    <tr>
+                        <th>ID Voluntario</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <th>109170</th>
+                        <th>Espera</th>
+                </table><br><br><br>
+                
+            </form>
+        </div>
+        </dialog>
+        
+        
+        
+        
+        <dialog id="aprobar_voluntario">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Voluntarios</h3>
+        </p>
+            </div>
+        <button onclick="document.getElementById('aprobar_voluntario').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_tres.png" alt="imagen 3" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Validar Voluntario</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('aprobar_voluntario', 'perfiles_pendientes')">Perfiles Pendientes</button>
+            <button onclick="cambiarVentana('aprobar_voluntario', 'aprobar_voluntario')">Validar Voluntario</button>
+            <button onclick="cambiarVentana('aprobar_voluntario', 'ver_usuarios')">Consultar Voluntarios</button>
+        </div>
+        <div class="full_form">
+            <form>
+                <div class="browser">
+                    <input type="text" placeholder="ID"><br><br>
+                </div>
+                <table>
+                    <tr>
+                        <th>ID Voluntario</th>
+                        <th>Status</th>
+                    </tr>
+                </table><br><br><br>
+                
+            </form>
+        </div>
+        <div>
+                <button onclick="cambiarVentana('aprobar_voluntario', 'validar_v')" class="btn-actualizar">Revisar</button>
+        </div>
+        </dialog>
+        
+        <dialog id="validar_v">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Voluntarios</h3>
+        </p>
+            </div>
+        <button onclick="cambiarVentana('validar_v', 'aprobar_voluntario')" class="boton_regresar">< Regresar</button>
+        <div class="imagen_con">
+            <img src="imagen_tres.png" alH=9Ô‡uGo`' „*k5ˇw )Acm/!>(Pñ h! §®:qm˝ºY§ "©i( 0,DY˜ lc√·ft|‹mxn≤DrÂ!!@¥07pb?j*D3rHMr≈«"ÃyˆzÏ“h[,Øs, ° n( 0–.xf>*z"` ¢ H 0( ". eir`ÀÌEb~GuheK˛œcmc\*   (^!"^&|K2i=&R≤¥ !†‡xAb(  !†dt†rtÏ6
+()!Î`  ¯
+•("5d04væ 8B1¯†a)`p§ "`c&¿$•4mÄp¨v86G≠cpÏ8=Ùt}Jb( $0 ¢ ,†)(!†(0™%6:0$)<‘YõBÔWl±(£6h¯,(0c"¿4´!,1HDr∞t± ' "¥"i>Â„ÚMµc*Ö≥>L.5L∂*`0`e."  `!(Œf(@`!#f·8\J>¡VR>.V*ü.	0 †!%""1  p1 ¶©∫xr ``3\
+DMsd!saÅÛ&-ÒzJ2!4≤ & H
+Xä8`$¶ ræÆtrÓä êdÄ°0<   ,8!!Gi}vie4Zr:TbÚòe˙∑.∞,)†@Ï≤ë§§=®4Ø÷m-Ä">E(2¢±ºØ$¸U°O ` /Jê$$<î»‰îNld@$u≤¶2*ä3#e0†™8cs¨tÌ&∞–|j7s8£SuÔë·€îu°,mÿa€".D+R]'Ò¡Üob5PmJn.e†$a ∞ºA±∞$$2• yroË§bÓa`m™dµlΩm£4∑ÂÆc>Iˆ∂˛^]jz±∫#3s7`4#Fû
+ !® $Ä †/dD÷ñB!®à$&™Ç|5&a$lKm0J† $‡'   #) m&$UTÌ)‡J‡( ≠¢∂·{çsv¡˙ÌOj§/*b†°(§g#`=‡Iæ°eiÎj{n∫L{lÂÏœ-¶∞°30@$$®fÄ¢‚≥ 4p lA7“=†Mh~ˆ*ñäb(Ëë¨§¨$Í)?`:G_$qnp‡p´5q/$h#])  ‡°é $H†  :‡2$Í´ `?wÙ`f_*π!"!%c& >ÇPet+M¥nŒkx©c#π&Ûce‡1 NF•jei…k /BUrF©De°Àeg+,?!pèB·bOnèlw.P!Rió&h,alhKO5 sotonÌˇEØsÂÛq3N·Qá‚!{°vº/b5U0n∂»b(¶¶≤`|åÈ‡vsgÂiaÔxb+e√wm∆_ÊÍŒ≥4t•f‰*ä5%h¢¥yßfxaRœµio`¨$Ï€≈sQ{.-oƒ"CéÚ%kãc'g^)ª6!rD¸vCÚ]E9˜FÌ*∂© -0 ,(q¸)hn(!•±°Å¥`∂{&Îv¯:Ì@SR=*UXT}º˝˙¬˛  `%h  Ä$`!h<lì>mgnc%èT 2:VlUbq@&b∆zº/Hb™"Ù)!&`  =6Wgt.Œé ("f§,C@°`(Ä`!"<ea˛†gl‰3wL"6wÁhN√b˜u™$c0`êk ,àà†ñ™<‚\p˝º
+Ä†0d$!a ,û(  0)tiv{<`2Û-#ssEı{gSf
+†5$& ‚d	!6d`¢ 3+ <BÓ‚}!ºhxd1™|dj"7p`eF-iÌm&ÂBPC,=˝“®^>Íjv $Ñ,a  81<†Å∑/fâ~hh`ÄA$dS" ‚q%  "}w`¬lu?™!"Ù!#`"¶ ¥6p`$h3 î&`lJè §(r!3)•Ç√"¢a∂°†"(¶ÄzÏ#%Ÿ‰HP#oM˝6t$Ó/¸<O@h6
+¢A§(8I†Ú†A41B`p ;r   ;2\ßz>Üg}ÚÖú'<i>≤ÿ!ò≥(!É8& & "Äé!®˙ØU6∂
+ej&≥ §°Ñ∞ Ö`Æa®?Ù†B~`∂É$© 1·  @°p!‰2* {r(Ív≤Ω%≤◊:tÄ0) • (  ∂¥|ofŒj]?  $á ‚1Ω/f˘Z–   •Ä;0/D)ıæÉ#.Ä$d#c!(p`$`$úBu`tCZ?Îs<Yeã=*‡cn"ac”^enhheä∑EÙGes·Gcaj≥'%‰'ZÁLrÅbßiÛVRßaÑ`kMgcd{#r|Ü!apΩ·ÏâÎ#ˆj∫33{oﬂab&t@™Â˝¥%‚$|ﬁk*zj$†($) %\¶0Îs°†0`,,@‡>@i`fƒ÷ %0aÄ"‚ha¯dÇ‡°Ät`» º †'4  
+1dpG"b®•)k8F-ÔD¨2b5zOdccQR≤‚≥1Ë# úâ `•Hwdc$È:„-3óLt5c?+6é
+ xA:¶#$`Ñ&(@h08∞ë"]ŸÒSÉbÈœd"æo  $`3`*§h ¨È5.qebgsc$…elMd/wu‚>	
+$ 	 b ±=78>ää„$(∞!(&â(®+>,i∆.Å§diπ`"%!∏u¥ÏÔ< /tduafÎq√'SÇ-!ríkz3u,˜(‚WÒireQˆÕ@M~ÄÖch]˝Ú‹ciØw'p2∞k9ErS=|2iÙz~[b%fˆGe‚àñ5(n%Á2e“e5-/|1cj˝ä0@)†0Ñ R\ek1†$h›ÈQ≠∫hukg«k^Øml'8$<¥h(¢®h=b($`ag!ˇ@,‡otmbOò„fqÆRJªkuo%)eﬂ'5+‡'Ã({s/Zx-!˜A~‚8 †)©§e2RE≠Í=Ü ™ÑdB`±†(§qt0kdQr∫=2tº˜|Ns~1–¢!¢®d!™ƒ
+`&Tb2g%“#o+teiÓ6m;º
+jú,!±"2# dr¨Æm£p:ö" !•ò$Z"hl"`  ¥x¨h~¢‡pAa>=  tTiﬂ`jv`"6
+&
+0#4-@‡, Tlkq?
+ à6"†V§ B@∏(0!0lwhv™¬¸asˇPf 2ÁwOR4fûhÊ,4‡† 1§4"·ÏÑA£00¨jKQó~*=pe#bqï‘p≤L}úiÔu,ge‡z-#]d3<>“s?>‚VO$w†:(0!º%°≤ #x'nÎW+C+pP *"2#x{a((äØ<|bËmVÇ¢†∞"4 á"§`†&  ‡2dº◊6?
+)æ†®Cª$2# !Í# 0≥`¥v' 4$n∂LD"tÅˆ·@º/¢æ†0„$ " ·!†  ( "8 ê ,(<ﬁıÿzD‚´)˛:K(«£~9#6»-íÅ"b8 –¢T"Y¢ ÖÉ!!$í%®?*: dà0fí e°!†!§4æ+|`0Er:=ˆ∑4fV><bÚ>‡
+   £B†Äd$=+dÔSMÄ ! yƒ ¡Y/hi&ü  2 •&'$ •ÊaUJ"pp‡#	∫„"‡Ä
+Â„EfÚ=m∞g~jÃÔ"ÓÇ„!Oh-rÛVÂnı‡|H(gÚgeﬂE-1ÂÂsta-$k{mg<`üL`uÌ£v #pAlÑS'›ZVπn+`'uy(v]vÈÆQd|gp+c_.©^rÿar·;4V}¸uÜf.*(h°-$D"5+esVû"  (an†¸~ƒËQ(<c≤Ä$ %0Ç® £i†(£0aÂ&&…9ÓãzeK,ï' S∏mj·ˆMpuÊe+NÛ2.Ä8(°Dl‡ƒ)¥0ol°±o0}Ml5.ˇ0 bv$ +  8)pä` 1˙àC,Ò[3ykdkd2€B”hö hh* ∞)•Pºπ±∫u%c≤1–$~gi*@Gr‹fHª∫*  L0 !Gp~Æ0:2°93 $(‰üAƒpvº.k%b0!¢†âå‚ÂvB,"o˙ahoc1yıfœiòdzÌnmiaË/4=jÂÏip_dErra’Û.aÚ}7~`p◊@W05"™º1w1.o(ofz˜V$aa∂<‡2ı>u√¬ºßbyñ‡n¯úJ`"%!b∞o4Hw1gÊU{€'&iÎsÁhOgÎmØ&(C(b°Ö£!( Çπi/JÎsp'çËi@GDä∫pw w.∞æn""kiT9#U}ga‡. 1jb≈Âs-b≠…9TujÊB  ó f®lb)¥-àivæ
+"s • åÕ%q≥/sLUyK¢ è`ypn0*?J,04µ&{ P>∫ 9f£⁄Q3+ol˜rbD0rE¡>#‡0X
+4$"`0a"T<ƒyv.û ±pt#`*¢!®0  <§ix2rå%w≥9‰fMl‰èGoZoµ3"f∂.†  ∏ (µ)<l\}m7¿.r¨(¯!¢ a$ &"§ºpÛ"--J: !l ‡ 1"†r†a$A¬&°Ùtbﬁ´:b*£Ç§ß6:ÑÇ.h E®·†°/Äl=I5Å‘d_eh-.‡::4‚†a(  °4  FRÂt ¶`xºs|:Uc˙#8j#Ô„˚ä7-ﬁ(4)!$Ù$@∞P 8"3	-b  `d=©Ù2€‰+3b<‡ Ä0bb ¢*l<Ta˛LA5xf'brvhGfª
+dEÂ! (F à%#\ø¯"lãb‚$ ¢†4¢∂)§ÿvé(D¥ª  4 ZIv>Sa)j    !/  6à4bŒÓdE~uCl7x2=*Êtlk`KtukG_~¯`"öEjo+Qw| DÿVkÔ§ {A#4 §|SvæÜ0e$ '=Ê±:Ôi%-/o~#jÄe%¢∞®k!Ë b"a}d)h1#.≠ı>M8<=øπ9,}-ı]èΩØ=|5ó/!º9yÆºø;5›m=<>=‹q=d-ø}7y<"˝9µ:c=çY≠∂xüù!À<_t "`$$<ª-ª`·-ùo›/=	9Ïºˇ}ù)§ø˘<cD%˘p@?00e$[ehaVi ‰ lGq0(7=,>≠}Ω}0-}<?-6ùÕtp?o>rò†j»¿3<+ØM 0/}˝?,1¯µ/)?8?=µ}=5Ωùõ
+9?$-i]	x–Q°ú<}¶<çºy˝¥5Yu=============0 -->
+        <dialog id="alta_actividad">
+            <div class="Titulo">
+                <p class="Menu"><h3>Actividades</h3></p>
+            </div>
+        <button onclick="document.getElementById('alta_actividad').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_cinco.png" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Crear Actividad</h3>
+        </div>
+        
+        <div class="botones">
+            <button onclick="cambiarVentana('alta_actividad', 'alta_actividad')">Alta</button>
+            <button onclick="cambiarVentana('alta_actividad', 'baja_actividad')">Baja</button>
+            <button onclick="cambiarVentana('alta_actividad', 'modificar_actividad')">Modificacion de fichas</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="nombre_a_acti">Nombre</label>
+                    <input type="text" id="nombre_a_acti">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="descripcion_a_acti">Descripci√≥n</label>
+                    <input type="text" id="descripcion_a_acti">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="asistentes_a_acti">Asistentes</label>
+                    <input type="text" id="asistentes_a_acti">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="encargado_a_acti">Encargado</label>
+                    <input type="text" id="encargado_a_acti">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Agregar</button>
+        </div>
+        </dialog>
+        
+        
+        
+        
+        <dialog id="baja_actividad">
+        <div class="Titulo">
+                <p class="Menu"><h3>Actividades</h3></p>
+            </div>
+        <button onclick="document.getElementById('baja_actividad').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_cinco.png" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Eliminar Actividad</h3>
+        </div>
+        
+        <div class="botones">
+            <button onclick="cambiarVentana('baja_actividad', 'alta_actividad')">Alta</button>
+            <button onclick="cambiarVentana('baja_actividad', 'baja_actividad')">Baja</button>
+            <button onclick="cambiarVentana('baja_actividad', 'modificar_actividad')">Modificacion de fichas</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="id_acti"></label>
+                    <input type="text" id="id_acti" placeholder="ID">
+                </div>
+                <div class="grupo-campo">
+                    <label for="id_acti_d"></label>
+                    <input type="text" id="id_acti_d" placeholder="Descripci√≥n">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Eliminar</button>
+        </div>
+        </dialog>
+        
+        
+        <dialog id="modificar_actividad">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Actividades</h3>
+        </p>
+            </div>
+        <button onclick="document.getElementById('modificar_actividad').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_cinco.png" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Actualizar Datos de Actividades</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('modificar_actividad', 'alta_actividad')">Alta</button>
+            <button onclick="cambiarVentana('modificar_actividad', 'baja_actividad')">Baja</button>
+            <button onclick="cambiarVentana('modificar_actividad', 'modificar_actividad')">Modificaci√≥n de fichas</button>
+        </div>
+        <div class="full_form">
+            <form>
+                <div class="browser">
+                    <input type="text" placeholder="ID"><br><br>
+                </div>
+                <div class="grupo-campo">
+                    <label for="nombre_a_actiy">Nombre</label>
+                    <input type="text" id="nombre_a_actiy">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="descripcion_a_actiy">Descripci√≥n</label>
+                    <input type="text" id="descripcion_a_actiy">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="asistentes_a_actiy">Asistentes</label>
+                    <input type="text" id="asistentes_a_actiy">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="encargado_a_actiy">Encargado</label>
+                    <input type="text" id="encargado_a_actiy">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Actualizar</button>
+        </div>
+        </dialog>
+        <dialog id="registro">
+            <div class="Titulo">
+                <p class="Menu"><h3>Regitrarse como Voluntario</h3></p>
+            </div>
+        <button onclick="document.getElementById('registro').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen uno" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Registrarse como Voluntario</h3>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="nom1">Nombre</label>
+                    <input type="text" id="nom1">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="ape_p1">Apellido Paterno</label>
+                    <input type="text" id="ape_p1">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="ape_m1">Apellido Materno</label>
+                    <input type="text" id="ape_m1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="correo1">Correo Electr√≥nico</label>
+                    <input type="text" id="correo1">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="edad1">Edad</label>
+                    <input type="text" id="edad1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="f_nacimiento1">Fecha Nacimiento</label>
+                    <input type="text" placeholder="DD/MM/YYYY" id="f_nacimiento1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="curp1">CURP</label>
+                    <input type="text" id="curp1">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="nss1">NSS</label>
+                    <input type="text" id="nss1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="direc1">Direcci√≥n</label>
+                    <input type="text" id="direc1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="n_telefonico1">N√∫mero de Tel√©fono</label>
+                    <input type="text" id="n_telefonico1">
+                </div>
+                
+                <div class="grupo-campo">
+                    <label for="m_registro1">Motivo de registro</label>
+                    <input type="text" id="m_registro1">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Enviar Solicitud</button>
+        </div>
+        </dialog>
+       
+       <!-- 0====================================================================0 -->
+       <!-- 0================== Regitrarse como Voluntario ======================0 -->
+       <!-- 0====================================================================0 -->
+       
+       <!-- 0====================================================================0 -->
+       <!-- 0================== Regitrarse como Voluntario ======================0 -->
+       <!-- 0====================================================================0 -->
+       <dialog id="necesidades">
+        <div class="Titulo">
+                <p class="Menu">
+            <h3>Necesidades del Centro</h3>
+        </p>
+            </div>
+        <button onclick="document.getElementById('necesidades').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen 1" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Necesodades del Centro</h3>
+        </div>
+        
+        <div class="full_form">
+            <form>
+                <table>
+                    <tr>
+                        <th>√Årea</th>
+                        <th>Urgencia</th>
+                        <th>Descripci√≥n</th>
+                        <th>Fecha de publicaci√≥n</th>
+                    </tr>
+                </table><br><br><br>
+            </form>
+        </div>
+        </dialog>
+       <!-- 0====================================================================0 -->
+       <!-- 0================== Regitrarse como Voluntario ======================0 -->
+       <!-- 0====================================================================0 -->
+       
+       <!-- 0====================================================================0 -->
+       <!-- 0================== Regitrarse como Voluntario ======================0 -->
+       <!-- 0====================================================================0 -->
+       
+       <dialog id="tareas">
+        <div class="Titulo">
+        <p class="Menu">
+            <h3>Mis Actividades</h3>
+        </p>
+        
+        </div>
+        <button onclick="document.getElementById('tareas').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen 4" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Consultar Tareas</h3>
+        </div>
+       
+        <div class="full_form">
+            <form>
+                <div class="browser">
+                    <input type="text" placeholder="ID Voluntario"><br><br>
+                </div>
+                <table>
+                    <tr>
+                        <th>ID Voluntario</th>
+                        <th>ID Tarea</th>
+                        <th>Descripci√≥n</th>
+                    </tr>
+                </table>
+                <br><br><br>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Buscar</button>
+        </div>
+        </dialog>
+        
+        <dialog id="consulta_calendario">
+        <div class="Titulo">
+        <p class="Menu">
+            <h3>Calendario de Actividades</h3>
+        </p>
+        
+        </div>
+        <button onclick="document.getElementById('consulta_calendario').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="imagen_cuatro.png" alt="imagen 4" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Calendario de Actividades</h3>
+        </div>
+       
+        <div class="full_form">
+            <form>
+                <div class="browser">
+                    <input type="text" placeholder="ID Actividad"><br><br>
+                </div>
+                <table>
+                    <tr>
+                        <th>Actividad</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                    </tr>
+                </table>
+                <br><br><br>
+            </form>
+        </div>
+        <div>
+                <button onclick="cambiarVentana('consulta_calendario', 'ver_actividad')" class="btn-actualizar">M√°s Informaci√≥n</button>
+        </div>
+        </dialog>
+       
+       <!-- PT2 -->
+       
+       <dialog id="ver_actividad">
+        <div class="Titulo">
+        <p class="Menu">
+            <h3>Actividades</h3>
+        </p>
+        
+        </div>
+        <button onclick="cambiarVentana('ver_actividad', 'consulta_calendario')" class="boton_regresar">< Atr√°s</button>
+        <div class="imagen_con">
+            <img src="imagen_cuatro.png" alt="imagen 4" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Consulta de Activiades</h3>
+        </div>
+       
+        <div class="full_form">
+            <form>
+                <table>
+                    <tr>
+                        <th>Actividad</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                    </tr>
+                </table>
+                <br><br><br>
+            </form>
+        </div>
+        </dialog>
+       <!-- 0====================================================================0 -->
+       <!-- 0================ Calendario de Activiadades ========================0 -->
+       <!-- 0====================================================================0 -->
+       
+       <!-- 0====================================================================0 -->
+       <!-- 0=========================== Reservar ===============================0 -->
+       <!-- 0====================================================================0 -->
+       <dialog id="buscar_actividad">
+        <div class="Titulo">
+                <p class="Menu"><h3>Reservaci√≥n</h3></p>
+        </div>
+        <button onclick="document.getElementById('buscar_actividad').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="provicional.jpg" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Consultar Actividad</h3>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="browser">
+                    <input type="text" id="id_b" placeholder="ID actividad">
+                </div>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                        <th>Descripci√≥n</th>
+                        <th>Cupos</th>
+                    </tr>
+                </table>
+                <br><br>
+            </form>
+        </div>
+        <div>
+                <button onclick="cambiarVentana('buscar_actividad', 'reservar_actividad')" class="btn-actualizar">Continuar</button>
+        </div>
+        </dialog>
+       <!-- 0=========================== Reservar PT2 ===============================0 -->
+        <dialog id="reservar_actividad">
+        <div class="Titulo">
+                <p class="Menu"><h3>Reservaci√≥n</h3></p>
+        </div>
+        <button onclick="cambiarVentana('reservar_actividad', 'buscar_actividad')" class="boton_regresar">< Atr√°s</button>
+        <div class="imagen_con">
+            <img src="provicional.jpg" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Detalles de actividad</h3>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                        <th>Descripci√≥n</th>
+                        <th>Cupos</th>
+                    </tr>
+                </table>
+                <br><br>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Reservar</button>
+        </div>
+        </dialog>
+       <!-- 0====================================================================0 -->
+       <!-- 0=========================== Reservar ===============================0 -->
+       <!-- 0====================================================================0 -->
+       
+       <!-- 0====================================================================0 -->
+       <!-- 0======================= Mis Reservaciones ==========================0 -->
+       <!-- 0====================================================================0 -->
+       <dialog id="Mis_reservaciones">
+        <div class="Titulo">
+                <p class="Menu"><h3>Mis Reservaciones</h3></p>
+        </div>
+        <button onclick="document.getElementById('Mis_reservaciones').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="provicional.jpg" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Mis Reservaciones</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('Mis_reservaciones', 'Mis_reservaciones')">Reservaciones</button>
+            <button onclick="cambiarVentana('Mis_reservaciones', 'cancelar_reservacion')">Cancelar Reservaci√≥n</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="browser">
+                    <input type="text" id="id_reservacion" placeholder="ID reservaci√≥n">
+                </div>
+                <table>
+                    <tr>
+                        <th>ID Reservaci√≥n</th>
+                        <th>Actividad</th>
+                    </tr>
+                </table>
+                <br><br>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Buscar</button>
+        </div>
+        </dialog>
+       <!-- 0=========================== Reservar PT2 ===============================0 -->
+        <dialog id="cancelar_reservacion">
+        <div class="Titulo">
+                <p class="Menu"><h3>Mis Reservaciones</h3></p>
+        </div>
+        <button onclick="document.getElementById('cancelar_reservacion').close()" class="boton_regresar">< Home</button>
+        <div class="imagen_con">
+            <img src="provicional.jpg" alt="foco" class="imagen">
+        </div>
+        <div class="titulos">
+            <h3>Cancelar Reservaci√≥n</h3>
+        </div>
+        <div class="botones">
+            <button onclick="cambiarVentana('cancelar_reservacion', 'Mis_reservaciones')">Reservaciones</button>
+            <button onclick="cambiarVentana('cancelar_reservacion', 'cancelar_reservacion')">Cancelar Reservaci√≥n</button>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="browser">
+                    <input type="text" id="id_reservacion_c" placeholder="ID reservaci√≥n">
+                </div>
+                <table>
+                    <tr>
+                        <th>ID Reservaci√≥n</th>
+                        <th>Actividad</th>
+                    </tr>
+                </table>
+                <br><br>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Cancelar</button>
+        </div>
+        </dialog>
+</body>
+</html>
