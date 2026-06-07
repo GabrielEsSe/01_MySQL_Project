@@ -5,6 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Centro de Actividades</title>
     <link rel="stylesheet" href="estructura.css">
+    
+    <style>
+        .presentacion {
+            background-color: #FFFFFF;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .Titulo h1 {
+            color: #5C5552; 
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        .titulos h2 {
+            color: #5C5552;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .imagen_con {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .imagen {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .formulario-centrado {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+        }
+
+        .grupo-campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .grupo-campo label {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #888888;
+            font-weight: 500;
+        }
+
+        .grupo-campo input, 
+        .grupo-campo select {
+            padding: 12px;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            background-color: #FAF8F5; 
+            transition: all 0.3s ease;
+            color: #5C5552;
+            font-family: inherit;
+        }
+
+        .grupo-campo input:focus, 
+        .grupo-campo select:focus {
+            outline: none;
+            border-color: #E6E6FA; 
+            background-color: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(230, 230, 250, 0.5);
+        }
+
+        .btn-actualizar {
+            background-color: #E6E6FA; 
+            color: #5C5552;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            display: block;
+            width: fit-content;
+        }
+
+        .btn-actualizar:hover {
+            background-color: #D8BFD8; 
+            transform: translateY(-2px);
+        }
+
+        #new, #news {
+            border: 2px solid #8FBC8F; 
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        #new h2, #news h2 {
+            color: #8FBC8F; 
+            margin-bottom: 10px;
+        }
+
+        #new p, #news p {
+            color: #5C5552;
+        }
+    </style>
 </head>
 <body>
 
@@ -43,9 +152,9 @@
             <li class="dropdown">
                 <a href="#voluntariado" class="dropdown-btn">Voluntariado</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#gestion-voluntarios">Gestionar Voluntarios</a></li>
-                    <li><a href="#registro-voluntario">Registrarse como Voluntario</a></li>
-                    <li><a href="#mis-tareas">Mis Tareas</a></li>
+                    <li><a href="registrovoluntario.html">Gestionar Voluntarios</a></li>
+                    <li><a href="gestionarvoluntario.html">Registrarse como Voluntario</a></li>
+                    <li><a href="tareas.html">Mis Tareas</a></li>
                 </ul>
             </li>
 
@@ -108,6 +217,4 @@
 
 </body>
 </html>
-
-
 

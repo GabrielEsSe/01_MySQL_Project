@@ -5,6 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Centro de Actividades</title>
     <link rel="stylesheet" href="estructura.css">
+    
+    <style>
+       
+        .btn-actualizar {
+            background-color: #E6E6FA; 
+            color: #5C5552;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .btn-actualizar:hover {
+            background-color: #D8BFD8; 
+            transform: translateY(-2px);
+        }
+
+        #news {
+            border: 2px solid #8FBC8F; 
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        #news h1 {
+            color: #8FBC8F; 
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        #news p {
+            color: #5C5552;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        /* tabla*/
+        .tabla-aesthetic {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 25px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .tabla-aesthetic th {
+            background-color: #C1DAC1; 
+            color: #5C5552;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .tabla-aesthetic td {
+            padding: 12px;
+            border-bottom: 1px solid #E0E0E0;
+            color: #5C5552;
+        }
+
+        .tabla-aesthetic tr:hover {
+            background-color: #FAF8F5; 
+        }
+    </style>
 </head>
 <body>
 
@@ -34,7 +108,7 @@
                 <a href="#actividades-modulo" class="dropdown-btn">Actividades y Reservas</a>
                 <ul class="dropdown-menu">
                     <li><a href="actividades.html">Ver Actividades</a></li>
-                    <li><a href="#calendario.html">Calendario de Actividades</a></li>
+                    <li><a href="calendario.html">Calendario de Actividades</a></li>
                     <li><a href="reservar.html">Reservar Cupo</a></li>
                     <li><a href="mis-reservaciones.html">Mis Reservaciones</a></li>
                 </ul>
@@ -43,20 +117,43 @@
             <li class="dropdown">
                 <a href="#voluntariado" class="dropdown-btn">Voluntariado</a>
                 <ul class="dropdown-menu">
-                    <li><a href="gestion-voluntarios.html">Gestionar Voluntarios</a></li>
-                    <li><a href="registro-voluntario.html">Registrarse como Voluntario</a></li>
-                    <li><a href="mis-tareas.html">Mis Tareas</a></li>
+                    <li><a href="registrovoluntario.html">Gestionar Voluntarios</a></li>
+                    <li><a href="gestionarvoluntario.html">Registrarse como Voluntario</a></li>
+                    <li><a href="tareas.html">Mis Tareas</a></li>
                 </ul>
             </li>
 
         </ul>
     </nav>
-
+    
     <main>
         <section id="news">
             <h1>Informe de Gastos</h1>
             <p>Aquí va la tabla que esta en a base de datos</p>
-                <button class="btn-actualizar">Guardar</button>
+
+            <table class="tabla-aesthetic">
+                <thead>
+                    <tr>
+                        <th>Concepto / Razón</th>
+                        <th>Monto</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Material de mantenimiento</td>
+                        <td>$1,200.00</td>
+                        <td>05/06/2026</td>
+                    </tr>
+                    <tr>
+                        <td>Insumos para talleres</td>
+                        <td>$850.00</td>
+                        <td>06/06/2026</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button class="btn-actualizar">Guardar</button>
         </section>
     </main>
 

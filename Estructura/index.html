@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Centro de Actividades</title>
     <link rel="stylesheet" href="estructura.css">
+    
 </head>
 <body>
 
     <header>
         <div class="brand">
-        <span class="brand-name">Centro Ecológico Para Personas de la Tercera Edad Sede Aragón</span>
-      </div>
+            <span class="brand-name">Centro Ecológico Para Personas de la Tercera Edad Sede Aragón</span>
+        </div>
     </header>
 
     <nav class="navbar">
@@ -43,9 +44,9 @@
             <li class="dropdown">
                 <a href="#voluntariado" class="dropdown-btn">Voluntariado</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#gestion-voluntarios">Gestionar Voluntarios</a></li>
-                    <li><a href="#registro-voluntario">Registrarse como Voluntario</a></li>
-                    <li><a href="#mis-tareas">Mis Tareas</a></li>
+                    <li><a href="registrovoluntario.html">Gestionar Voluntarios</a></li>
+                    <li><a href="gestionarvoluntario.html">Registrarse como Voluntario</a></li>
+                    <li><a href="tareas.html">Mis Tareas</a></li>
                 </ul>
             </li>
 
@@ -53,25 +54,31 @@
     </nav>
 
     <main>
-        <section class="presentacion" id="inicio">
-            <img class="logo-circle" src="Imagen2.png" alt="Logo" />
-            <h2>NOTICIA MÁS RELEVANTE</h2>
-            <p>Cuerpo de Noticia</p>
-        </section>
-
-        <section id="news">
-            <h2>Aquí va una novedad u noticia</h2>
-            <p>Aquí va una novedad u noticia.</p>
-        </section>
-
-        <section id="new">
-            <h2>Aquí va una novedad u noticia</h2>
-            <p>Aquí va una novedad u noticia.</p>
-        </section>
-
-        <section id="news">
-            <h2>Aquí va una novedad u noticia</h2>
-            <p>Aquí va una novedad u noticia.</p>
+        <section id="noticia-especial">
+            <section id="noticia-principal">
+                <div class="tarjeta-completa">
+                    <img src="Noticia1.png" alt="Noticia Aragón Vital" class="foto-completa">
+                    
+                    <div class="texto-noticia">
+                        <h2 style="color: #2C4A3B; margin-top: 0; text-align: center;">Latidos en la selva urbana</h2>
+                        
+                        <p style="color: #4A5B4F; font-size: 1.1rem; margin: 0;">
+                            El Centro Ecológico Sede Aragón ha dado un paso gigante con el programa "Aragón Vital". 
+                            Hemos integrado la terapia asistida con perros rescatados, mejorando significativamente 
+                            el bienestar emocional de nuestros adultos mayores. 
+                        </p>
+                        <p style="color: #4A5B4F; font-size: 1.1rem; margin-top: 15px;">
+                            La iniciativa, que ha captado la atención del Diario Local, busca fomentar la salud física 
+                            a través de paseos y cuidados, demostrando que en nuestro centro todas las formas de vida 
+                            florecen juntas. ¡Ven a conocer a nuestros nuevos co-terapeutas!
+                        </p>
+                        
+                        <p style="margin-top: 25px; font-size: 0.9rem; color: #2C4A3B; font-weight: bold; text-align: right;">
+                            Fuente: Diario Local | Sección Comunidad
+                        </p>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 

@@ -5,6 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Centro de Actividades</title>
     <link rel="stylesheet" href="estructura.css">
+    
+    <style>
+        --css
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        #news {
+            border: 2px solid #8FBC8F; 
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efecto flotante al pasar el mouse */
+        #news:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        #news h1 {
+            color: #5C5552; 
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            border-bottom: 3px solid #C1DAC1; 
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        #news h2 {
+            color: #8FBC8F; 
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        #news p {
+            color: #888888;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        .btn-actualizar {
+            background-color: #E6E6FA; 
+            border: none;
+            padding: 12px 35px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-actualizar:hover {
+            background-color: #D8BFD8; 
+            transform: translateY(-2px);
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -34,7 +102,7 @@
                 <a href="#actividades-modulo" class="dropdown-btn">Actividades y Reservas</a>
                 <ul class="dropdown-menu">
                     <li><a href="actividades.html">Ver Actividades</a></li>
-                    <li><a href="#calendario.html">Calendario de Actividades</a></li>
+                    <li><a href="calendario.html">Calendario de Actividades</a></li>
                     <li><a href="reservar.html">Reservar Cupo</a></li>
                     <li><a href="mis-reservaciones.html">Mis Reservaciones</a></li>
                 </ul>
@@ -43,15 +111,15 @@
             <li class="dropdown">
                 <a href="#voluntariado" class="dropdown-btn">Voluntariado</a>
                 <ul class="dropdown-menu">
-                    <li><a href="gestion-voluntarios.html">Gestionar Voluntarios</a></li>
-                    <li><a href="registro-voluntario.html">Registrarse como Voluntario</a></li>
-                    <li><a href="mis-tareas.html">Mis Tareas</a></li>
+                    <li><a href="registrovoluntario.html">Gestionar Voluntarios</a></li>
+                    <li><a href="gestionarvoluntario.html">Registrarse como Voluntario</a></li>
+                    <li><a href="tareas.html">Mis Tareas</a></li>
                 </ul>
             </li>
 
         </ul>
     </nav>
-
+    
     <main>
         <section id="news">
             <h1>Informe de Gastos</h1>

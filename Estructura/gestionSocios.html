@@ -5,6 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración - Centro de Actividades</title>
     <link rel="stylesheet" href="estructura.css">
+    
+    <style>
+        .presentacion {
+            background-color: #FFFFFF;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        .Titulo h1 {
+            color: #5C5552; 
+            margin-bottom: 25px;
+            font-weight: 600;
+            font-size: 1.8rem;
+        }
+
+        .titulos h2 {
+            color: #5C5552;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .imagen_con {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .imagen {
+            max-width: 100%;
+            border-radius: 15px;
+        }
+
+        .formulario-centrado {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+        }
+
+        .grupo-campo {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .grupo-campo label {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            color: #888888;
+            font-weight: 500;
+        }
+
+        .grupo-campo input, 
+        .grupo-campo select {
+            padding: 12px;
+            border: 1px solid #E0E0E0;
+            border-radius: 10px;
+            background-color: #FAF8F5; 
+            transition: all 0.3s ease;
+            color: #5C5552;
+            font-family: inherit;
+        }
+
+        .grupo-campo input:focus, 
+        .grupo-campo select:focus {
+            outline: none;
+            border-color: #E6E6FA; 
+            background-color: #FFFFFF;
+            box-shadow: 0 0 0 3px rgba(230, 230, 250, 0.5);
+        }
+
+        .btn-actualizar {
+            background-color: #E6E6FA; 
+            color: #5C5552;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 25px auto 0 auto; 
+            width: fit-content;
+        }
+
+        .btn-actualizar:hover {
+            background-color: #D8BFD8; 
+            transform: translateY(-2px);
+        }
+
+        #new, #news {
+            border: 2px solid #8FBC8F; 
+            background-color: #FFFFFF;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        #new h2, #news h2 {
+            color: #8FBC8F; 
+            margin-bottom: 10px;
+        }
+
+        #new p, #news p {
+            color: #5C5552;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,119 +135,67 @@
                     <li><a href="informes.html">Generar Informe</a></li>
                     <li><a href="donativos.html">Registrar Donativos</a></li>
                     <li><a href="necesidades.html">Necesidades del Centro</a></li>
+                    <li><a href="tareas.html">Tareas</a></li>
                 </ul>
             </li>
 
             <li class="dropdown">
                 <a href="#actividades-modulo" class="dropdown-btn">Actividades y Reservas</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#actividades">Ver Actividades</a></li>
-                    <li><a href="#calendario">Calendario de Actividades</a></li>
-                    <li><a href="#reservar">Reservar Cupo</a></li>
-                    <li><a href="#mis-reservaciones">Mis Reservaciones</a></li>
+                    <li><a href="actividades.html">Ver Actividades</a></li>
+                    <li><a href="calendario.html">Calendario de Actividades</a></li>
+                    <li><a href="reservar.html">Reservar Cupo</a></li>
+                    <li><a href="mis-reservaciones.html">Mis Reservaciones</a></li>
                 </ul>
             </li>
 
             <li class="dropdown">
                 <a href="#voluntariado" class="dropdown-btn">Voluntariado</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#gestion-voluntarios">Gestionar Voluntarios</a></li>
-                    <li><a href="#registro-voluntario">Registrarse como Voluntario</a></li>
-                    <li><a href="#mis-tareas">Mis Tareas</a></li>
+                    <li><a href="registrovoluntario.html">Gestionar Voluntarios</a></li>
+                    <li><a href="gestionarvoluntario.html">Registrarse como Voluntario</a></li>
+                    <li><a href="tareas.html">Mis Tareas</a></li>
                 </ul>
             </li>
 
         </ul>
     </nav>
 
-    <main>
-        <nav>
-            <a href="gestionSocios.html">Registrar Socio</a>
-            <a href="baja_socio.html">Eliminar Socio</a>
-            <a href="cambio_socio.html">Actualizar datos de Socios</a>
+<main>
+        <nav style="margin-bottom: 20px;">
+            <a href="gestionSocios.html" style="margin-right: 15px; color: #5C5552; text-decoration: none; font-weight: bold;">Registrar Socio</a>
+            <a href="baja_socio.html" style="margin-right: 15px; color: #5C5552; text-decoration: none;">Eliminar Socio</a>
+            <a href="cambio_socio.html" style="color: #5C5552; text-decoration: none;">Actualizar datos de Socios</a>
         </nav>
+
         <section class="presentacion" id="inicio">
             <div class="Titulo">
-                <p class="Menu"><h1>Gestionar Voluntarios</h1></p>
+                <h1 class="Menu">Gestionar Usuarios</h1>
             </div>
-        <div class="imagen_con">
-            <img src="imagen_uno.png" alt="imagen uno" class="imagen">
-        </div>
-        <div class="titulos">
-            <h2>Registrar Socio</h2>
-        </div>
-        <div class="full_form">
-            <form class="formulario-centrado">
-                <div class="grupo-campo">
-                    <label for="nom1">Nombre</label>
-                    <input type="text" id="nom1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="correo1">Apellido Paterno</label>
-                    <input type="text" id="correo1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="m_registro1">Apellido Materno</label>
-                    <input type="text" id="m_registro1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="f_nacimiento1">Fecha Nacimiento</label>
-                    <input type="text" placeholder="DD/MM/YYYY" id="f_nacimiento1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="curp1">CURP</label>
-                    <input type="text" id="curp1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="direc1">Colonia</label>
-                    <input type="text" id="direc1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="direc1">Estado</label>
-                    <input type="text" id="estado1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="direc1">CP</label>
-                    <input type="text" id="cp1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="direc1">Calle</label>
-                    <input type="text" id="calle1">
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="n_telefonico1">Número de Teléfono</label>
-                    <input type="text" id="n_telefonico1">
-                </div>
-            </form>
-        </div>
-        <div>
-                <button class="btn-actualizar">Agregar</button>
-        </div>
-        </section>
-       
-        <section id="new">
-            <h2>Aquí va una novedad u noticia</h2>
-            <p>Aquí va una novedad u noticia.</p>
-        </section>
-
-        <section id="news">
-            <h2>Aquí va una novedad u noticia</h2>
-            <p>Aquí va una novedad u noticia.</p>
+            <div class="imagen_con">
+                <img src="imagen_uno.png" alt="imagen uno" class="imagen">
+            </div>
+            <div class="titulos">
+                <h2>Registrar Socio</h2>
+            </div>
+            <div class="full_form">
+                <form class="formulario-centrado">
+                    <div class="grupo-campo">
+                        <label for="nom1">Nombre</label>
+                        <input type="text" id="nom1" name="nombre" placeholder="Nombre completo" required>
+                    </div>
+                    <div class="grupo-campo">
+                        <label for="tipo_socio">Tipo de Socio</label>
+                        <select id="tipo_socio" name="tipo_socio">
+                            <option value="adulto_mayor">Adulto Mayor</option>
+                            <option value="familiar">Familiar</option>
+                        </select>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 15px;">
+                        <button type="submit" class="btn-actualizar">Guardar Registro</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 - Sistema de Gestión de Club de Actividades. Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-</html>
