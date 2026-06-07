@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Centro de Actividades</title>
+    <link rel="stylesheet" href="estructura.css">
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+        <span class="brand-name">Centro Ecológico Para Personas de la Tercera Edad Sede Aragón</span>
+      </div>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            
+            <li><a href="index.html">Inicio</a></li>
+
+            <li class="dropdown">
+                <a href="#gestion" class="dropdown-btn">Gestión</a>
+                <ul class="dropdown-menu">
+                    <li><a href="gestionSocios.html">Gestión de Usuarios</a></li>
+                    <li><a href="informes.html">Generar Informe</a></li>
+                    <li><a href="donativos.html">Registrar Donativos</a></li>
+                    <li><a href="necesidades.html">Necesidades del Centro</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#actividades-modulo" class="dropdown-btn">Actividades y Reservas</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#actividades">Ver Actividades</a></li>
+                    <li><a href="#calendario">Calendario de Actividades</a></li>
+                    <li><a href="#reservar">Reservar Cupo</a></li>
+                    <li><a href="#mis-reservaciones">Mis Reservaciones</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#voluntariado" class="dropdown-btn">Voluntariado</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#gestion-voluntarios">Gestionar Voluntarios</a></li>
+                    <li><a href="#registro-voluntario">Registrarse como Voluntario</a></li>
+                    <li><a href="#mis-tareas">Mis Tareas</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <nav>
+            <a href="gestionSocios.html">Registrar Socio</a>
+            <a href="baja_socio.html">Eliminar Socio</a>
+            <a href="cambio_socio.html">Actualizar datos de Socios</a>
+        </nav>
+        <section class="presentacion" id="inicio">
+            <div class="Titulo">
+                <p class="Menu"><h1>Gestionar Voluntarios</h1></p>
+            </div>
+        <div class="imagen_con">
+            <img src="imagen_uno.png" alt="imagen uno" class="imagen">
+        </div>
+        <div class="titulos">
+            <h2>Registrar Socio</h2>
+        </div>
+        <div class="full_form">
+            <form class="formulario-centrado">
+                <div class="grupo-campo">
+                    <label for="nom1">Nombre</label>
+                    <input type="text" id="nom1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="correo1">Apellido Paterno</label>
+                    <input type="text" id="correo1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="m_registro1">Apellido Materno</label>
+                    <input type="text" id="m_registro1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="f_nacimiento1">Fecha Nacimiento</label>
+                    <input type="text" placeholder="DD/MM/YYYY" id="f_nacimiento1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="curp1">CURP</label>
+                    <input type="text" id="curp1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="direc1">Colonia</label>
+                    <input type="text" id="direc1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="direc1">Estado</label>
+                    <input type="text" id="estado1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="direc1">CP</label>
+                    <input type="text" id="cp1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="direc1">Calle</label>
+                    <input type="text" id="calle1">
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="n_telefonico1">Número de Teléfono</label>
+                    <input type="text" id="n_telefonico1">
+                </div>
+            </form>
+        </div>
+        <div>
+                <button class="btn-actualizar">Agregar</button>
+        </div>
+        </section>
+       
+        <section id="new">
+            <h2>Aquí va una novedad u noticia</h2>
+            <p>Aquí va una novedad u noticia.</p>
+        </section>
+
+        <section id="news">
+            <h2>Aquí va una novedad u noticia</h2>
+            <p>Aquí va una novedad u noticia.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Sistema de Gestión de Club de Actividades. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
